@@ -1,21 +1,22 @@
-#(©)Codexbotz
+#(©) AxomBotz
 
 from pyrogram import __version__
 from bot import Bot
 from config import OWNER_ID
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Source Code : <a href='https://github.com/CodeXBotz/File-Sharing-Bot'>Click here</a>\n○ Channel : @CodeXBotz\n○ Support Group : @CodeXBotzSupport</b>",
+            text = f"<b><b>○ 𝖮𝗐𝗇𝖾𝗋 : <a href='tg://user?id={OWNER_ID}'>𝖠𝗄𝖺𝗌𝗁</a>\n○ 𝖬𝗈𝗏𝗂𝖾𝗌 : <a href='https://t.me/+RnKzgKCQ2Uw2NzJl'>𝖠ʟʟ 𝖬ᴏᴠɪᴇ𝗌𝖧ᴜʙ 𝖮ғғɪᴄɪᴀʟ 🍿🎥</a>\n○ 𝖼𝗈𝗆𝗆𝗎𝗇𝗂𝗍𝗒 : <a href='https://t.me/+yft5ysRDW4BiOTc9'>𝖼𝗈𝗆𝗆𝗎𝗇𝗂𝗍𝗒</a>\n</a></b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data = "close"),
+                    InlineKeyboardButton('ᴄᴏᴍᴍᴜɴɪᴛʏ', url='https://t.me/+yft5ysRDW4BiOTc9')
                     ]
                 ]
             )
